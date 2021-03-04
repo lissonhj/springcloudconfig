@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    config:
+      name: configtest     # 获取配置文件的名称
+      profile: pro         # 获取配置策略
+      label: master        # 获取配置文件的分支，如果是本地的，则无用，默认是mater
+      discovery:
+        enabled: true
+        service-id: springcloud-config-server   # 指定配置中心的Service-id,以便使用集群等高可用
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:http://localhost:8002/eureka/
