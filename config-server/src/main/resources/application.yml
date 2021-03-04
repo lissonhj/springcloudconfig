@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: springcloud-config-server
+  cloud:
+    config:
+       server:
+         git:
+           uri: https://github.com/lissonhj/springcloudconfig.git     # 配置Git长库的地址
+           search-paths: /springcloudconfig/config-repo              # git仓库下的相对地址
+           username: lissonhj
+           password: lissonhj999!
+server:
+  port: 9003
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:http://localhost:8002/eureka/
